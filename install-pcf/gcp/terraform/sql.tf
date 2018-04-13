@@ -4,7 +4,7 @@ resource "random_pet" "sql_db" {
 
 resource "google_sql_database_instance" "master" {
   region           = "${var.gcp_region}"
-  database_version = "MYSQL_5_6"
+  database_version = "MYSQL_5_7"
   name             = "${var.prefix}-${random_pet.sql_db.id}"
 
   settings {
